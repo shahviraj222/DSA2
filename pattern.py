@@ -1,5 +1,6 @@
+import math
 def print1(n):
-    for row in range(1,n+1):
+    for num in range(1,n+1):
         for col in range(1,n+1):
             print("* ",end="")
         print()    
@@ -127,7 +128,53 @@ def print11(n):
             print(chr(j),end="")
         print()    
 
+def print12(n):
+# *      *
+# **    **
+# ***  ***
+# ********
+# ***  ***
+# **    **
+# *      *
+    for row in range(1,((2*n)-1)+1):
+        num = row
+        if row > n:
+            num = 2*n-row
+        # star
+        for col in range(1,num+1):
+            print("*",end="")
 
-n = 6
-print11(n)
+        # space
+        for col in range(1,((n-num)*2)+1):
+            print(" ",end="")
+
+        # start 
+        for col in range(1,num+1):
+            print("*",end="")
+
+        print("")
+
+def print13(n):
+    for row in range(1,n+1):
+        # start
+        num = row
+        if row ==1 or row == n:
+            for col in range(1,n+1):
+                print("*",end="")
+            print("")    
+        else:
+            for col in range(1,2):
+                print("*",end="")
+            
+            temp = n-2  
+
+            for col in range(1,temp+1):
+                print(" ",end="")
+
+            for col in range(1,2):
+                print("*",end="")
+            print("")    
+
+n = 5
+print13(n)
 
