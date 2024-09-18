@@ -175,6 +175,22 @@ def print13(n):
                 print("*",end="")
             print("")    
 
-n = 5
-print13(n)
+def print14(n):
+# 33333
+# 32223
+# 32123
+# 32223
+# 33333
+    for row in range(1,2*n):
+        for col in range(1,2*n):
+            top = row-1
+            bottom = ((2*n)-1)-row
+            left = col-1
+            right = ((2*n)-1)-col
+            print(n-min(min(top,bottom),min(right,left)),end="")
+        print("")
+
+
+n = 3
+print14(n)
 
