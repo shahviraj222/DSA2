@@ -12,10 +12,9 @@ def reverse(n):
     if isnegative:
         revnum = revnum * -1
     return revnum
-
-
-print(reverse(1534236469))
-
-# Complexity O(log N)  
-# log = base 10
-# ln  = base 2
+n=-121
+rev = reverse(n)
+if rev == n:
+    print("Palindrome")
+else:    
+    print("Not Palindrome")    
