@@ -9,4 +9,4 @@ def gcd(x1,x2):
 d = gcd(24,12)
 print(d)
 
-# complexity O(min(m1,m2))
+#  complexity O(min(m1,m2))

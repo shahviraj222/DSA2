@@ -5,13 +5,13 @@ def armstrong(n):
     temp = 0
     sum = 0
 
-    if(n<= 10 and n>-1):
+    if n in range(0,11):
         return True
     
     if n <= -1:
         return False 
     
-    while(n>0):
+    while n:
         temp = n%10
         sum = sum + temp ** 3
         n = n//10

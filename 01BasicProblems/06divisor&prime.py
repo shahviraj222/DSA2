@@ -1,11 +1,11 @@
-# broute force aproach is there to find the divsior and other mehtode is also there
-# take sqrt and go uptil 
+# take sqrt and go uptil that
 # 36
 # 1 * 36
 # 2 * 18
 # 3 * 12
 # 4 * 9
 # 6 * 6
+
 import math
 def divisor(n):
     d=set()
