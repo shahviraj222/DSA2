@@ -77,6 +77,7 @@ def print7(n):
     print5(n)
     print6(n) 
 
+# 
 def print8(n):
 # *
 # **
@@ -93,6 +94,7 @@ def print8(n):
             print("*",end="")
         print()   
 
+#
 def print9(n):
     for row in range(1,n+1):
         for col in range(1,row+1):
@@ -175,6 +177,7 @@ def print13(n):
                 print("*",end="")
             print("")    
 
+# 
 def print14(n):
 # 33333
 # 32223
