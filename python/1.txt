@@ -1,0 +1,6 @@
+For Revision Of Python
+https://github.com/hiteshchoudhary/chai-aur-python
+
+For Video
+Basics : https://www.youtube.com/watch?v=v9bOWjwdTlg&t=4326s&ab_channel=ChaiaurCode
+Web : https://www.youtube.com/watch?v=Cri8__uGk-g&ab_channel=ChaiaurCode

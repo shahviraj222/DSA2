@@ -1,0 +1,10 @@
+Main is the starting point in the .py file
+JSON (JavaScript Object Notation) is a text-based format for storing and exchanging data that's both human-readable and machine-parsable
+JSON Starts with '' string also '[{},{}]' this form alos.
+
+datatype json.load return is List []
+enumarate give indexing in tuples (1,{}), (2,{})
+
+Passing values in the funcitons to functions
+    1 object is immutable call value (copy of the object's value.)
+    2 object is mmutable then call by refrence (receives a reference to the same object.)
