@@ -1,10 +1,4 @@
-n=2
-def display(c):
-    global n
-    if(c > n):
-        return
-    display(c+1)
-    print(c)
+s = ["fensdjkjfsdk ","djsmf"]
+s = ','.join(v for v in s)
 
-
-display(1)
+print(s)
