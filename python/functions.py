@@ -35,6 +35,7 @@ def sum_all(*args):
     # *args return number
     # args return tuples
     return sum(args)
+
 print(sum_all(1,2,324))
 
 
