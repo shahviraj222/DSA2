@@ -56,11 +56,11 @@ class SingleHashTable:
         if self.table[index]:
             return value
         return False
-
+    
     def delete(self,value):
         index = self._hash(value) 
         if self.table[index]:
-            self.table[index].pop() 
+            self.table[index].pop()  # problem : if collision happen, at one index: multiple values there pop remove last one so use enumarate... 
             return True        
         return False
     
@@ -121,7 +121,7 @@ class ValuePairHashTable:
 hash_table = ValuePairHashTable(10)
 hash_table.insert("name", "Viraj")
 hash_table.insert("age", 25)
-print(hash_table.search("name"))                  # Output: Viraj
+print(hash_table.search("name"))                   # Output: Viraj
 hash_table.delete("age")
 print(hash_table.search("age") ,"Key not found")   # Output: None
 
@@ -146,5 +146,5 @@ a[3].pop()
 after execution
 a = [[],[],[],[234,23]]
 
-
+delete function implementation is important
 '''
