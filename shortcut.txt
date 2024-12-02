@@ -1,0 +1,13 @@
+Reactjs code snippets
+
+rsf   == to get the direct snippets of creating functions
+
+Command + Shift + >  = "description of file what components are"
+
+Option + Command + space = "search in the finder"
+
+Shift + Command + P = "search bar of vs code (toggle word etc)"
+
+Shift + Command + F = Search File name
+
+Command + F = Find in open file
