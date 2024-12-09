@@ -3,6 +3,10 @@
     In sorting we have two things one is adaptable and other is stable or not.
     adaptable = if flag is sorted is there any swapping happening. 
     stable =  if the array contain  duplicate then weather they are in the give position or not?
+    
+    Types Of Sorting
+    1)Comparision Sort  = bubble, insertion
+    2)IndexBased Sort   = count sort , bucket/bin sort
 
 """
 
