@@ -1,6 +1,12 @@
 """
+Types Of Sorting
+    1)Comparision Sort  = bubble, insertion
+    2)IndexBased Sort   = count sort , bucket/bin sort
+
 Insertion sort usefull for the link list O(n)
 For Array Insertion Sort O(n^2)
+
+
 """
 
 a = [12,233,34,3] 
