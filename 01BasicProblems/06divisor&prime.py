@@ -7,34 +7,24 @@
 # 6 * 6
 
 import math
-def divisor(n):
+
+def divisor(num):
     d=set()
-    sqrt = int(math.sqrt(n))
-    for i in range(1,sqrt + 1):
-        if n % i == 0:
+    sqrt = round(math.sqrt(num))
+    for i in range(1,sqrt+1):
+        if num % i == 0:
+            d.add(num//i)
             d.add(i)
-            d.add(n//i)
-    return d    
+    return d
 
-def prime(n):
-    if n <= 1:
-        return False
-    sqrt = int(math.sqrt(n))
-    for i in range(2,sqrt + 1):
-        if n % i == 0:
+def primeChecker(num):
+    sqrt = round(math.sqrt(num))
+    for i in range(2,sqrt+1):
+        if num % i == 0:
             return False
-    return True    
-
-
-# print(divisor(123))
-# print(prime(123))
-
-n=2
-
-if(prime(n)):
-    print(n,"is Prime")
-
-else:
-    print("Number is not Prime, Factors are ",divisor(n))    
+    return True
+    
+print(primeChecker(121))  
+print(divisor(36))
 
 # complexity O(sqrt(n))    n = input number
