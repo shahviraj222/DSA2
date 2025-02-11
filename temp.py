@@ -1,22 +1,17 @@
-class Car:
-    def __init__(self,brand,model):
-      self.__brand = brand
-      self.__model = model
-      self.name = "viraj"
-    def display(self):
-        print(f"Brand:{self.__brand}\tModel:{self.__model}",end="\t")
+def armstromChecker(num):
+    sum = 0
+    temp = num
+    if num in range(0,10):
+        return True
+    if num < 0:
+        return False
+    while temp > 0:
+        sum = sum + ((temp%10) ** 3)
+        temp = temp // 10
 
-class ElectricCar (Car):
-   def __init__(self, brand, model,size):
-      super().__init__(brand, model)
-      self.__batterySize = size
-
-   def display(self):
-      super().display()
-      print("Battery Size:",self.__batterySize)   
+    if sum == num:
+        return True
+    return False    
 
 
-mynewcar = ElectricCar("BMW","X1",5000)
-
-mynewcar.display()
-                       
+print(armstromChecker(153))

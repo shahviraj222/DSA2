@@ -1,24 +1,23 @@
-def reverse(n):
+# 12321
+
+def palindromeChecker(num):
+    number = num
+    revrse = 0
     isnegative = False
-    if not n>=0:
-        isnegative = True
+    if num < 0:
+        isnegative =True
+        num = abs(num)
+        
+    while num:
+        revrse = revrse*10 + num%10
+        num = num//10
 
-    num = abs(n)
-    revnum = 0
-    while(num>0):
-        temp = num %10
-        revnum = (revnum*10)+temp 
-        num = num // 10
     if isnegative:
-        revnum = revnum * -1
-    return revnum
-n=-121
-rev = reverse(n)
-if rev == n:
-    print("Palindrome")
-else:    
-    print("Not Palindrome")    
+        revrse *= -1
 
+    if number == revrse:
+        return True
+    
+    return False    
 
-# isalpha()
-# isnumeric()
+print(palindromeChecker(-22))
