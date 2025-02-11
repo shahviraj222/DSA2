@@ -1,4 +1,4 @@
-# Encapuslation  = capsulating the data for the outer world only available for the member of function
+# Encapuslation  = capsulating the data for the outer world only available for the member of Class
 
 # using __ before any variable name 
 class Car:
