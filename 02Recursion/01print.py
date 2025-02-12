@@ -6,7 +6,6 @@ def recursionfun(i,n):
     if i > n :
         return
     print(i,"Viraj")
-    i = i +1
-    recursionfun(i,n) 
+    recursionfun(i+1,n) 
 
 recursionfun(1,5)    
