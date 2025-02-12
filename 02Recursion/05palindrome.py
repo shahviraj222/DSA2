@@ -19,10 +19,10 @@ def recpalindrome(a,start,end):
         return True
     else:
         if a[start] == a[end]:
-            return recpalindrome(a,start+1,end-1)        #you have to return the function call else the reslut stuck
-        else:
+            return recpalindrome(a,start+1,end-1)        #you have to return the function call else the reslut stuck :: solved by writing last statement
             return False
         
+        return True    
 
 def shortpalindrome(s):
     cleaned = ''.join(char.lower() for char in s if char.isalnum())
