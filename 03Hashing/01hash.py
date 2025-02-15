@@ -93,7 +93,7 @@ class ValuePairHashTable:
         """Insert a key-value pair into the hash table."""
         index = self._hash(key)
         # as a pair we get list so that's why 0 and 1  [[]] 
-        # [[[k,v]], []]
+        # [ [[k,v]] , [] ]
         for pair in self.table[index]:   
             if pair[0] == key:
                 pair[1] = value                                # Update value if key exists
