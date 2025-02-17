@@ -1,37 +1,40 @@
+ 
+# class SingleHash():
+#     def __init__(self,size)->None:
+#         self.sizeTable = size
+#         self.table = [[-1]for _ in range(self.sizeTable)]
 
-class SingleHash():
-    def __init__(self,size)->None:
-        self.sizeTable = size
-        self.table = [[-1]for _ in range(self.sizeTable)]
-
-    def _hash(self,key) -> int:
-        return hash(key)%self.sizeTable 
+#     def _hash(self,key) -> int:
+#         return hash(key)%self.sizeTable 
       
-    def insert(self,key):
-        index = self._hash(key)
-        self.table[index].append(key)
+#     def insert(self,key):
+#         index = self._hash(key)
+#         self.table[index].append(key)
 
-    def delete(self,key):
-        index = self._hash(key)
-        if key in self.table[index]:
-            self.table[index].remove(key)
-            return key
-        return False
+#     def delete(self,key):
+#         index = self._hash(key)
+#         if key in self.table[index]:
+#             self.table[index].remove(key)
+#             return key
+#         return False
 
-    def search(self,key):
-        index = self._hash(key)
-        # here in keyword search as linklist O(n) if multiply element present at one index
-        if key in self.table[index]:
-            return True
+#     def search(self,key):
+#         index = self._hash(key)
+#         # here in keyword search as linklist O(n) if multiply element present at one index
+#         if key in self.table[index]:
+#             return True
         
-        return False
+#         return False
 
-h1 = SingleHash(9)
-h1.insert(34)
-h1.insert(45)
-print(h1.search(78))
-print(h1.delete(45))
-print(h1.search(45))
+# h1 = SingleHash(9)
+# h1.insert(34)
+# h1.insert(45)
+# print(h1.search(78))
+# print(h1.delete(45))
+# print(h1.search(45))
+
+
+
 # def patter14(n):
 #     for row in range(0,n):
 #         # star
