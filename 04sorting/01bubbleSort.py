@@ -1,8 +1,8 @@
 """
 
     In sorting we have two things one is adaptable and other is stable or not.
-    adaptable = if flag is sorted is there any swapping happening. 
-    stable =  if the array contain  duplicate then weather they are in the give position or not?
+    adaptable = minimum time taken if list is sorted. 
+    stable =  if the array contain  duplicate then weather they are in the given position or not?
     
     Types Of Sorting
     1)Comparision Sort  = bubble, insertion

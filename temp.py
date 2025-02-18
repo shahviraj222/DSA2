@@ -1,4 +1,104 @@
- 
+def recursion(n):
+    if n==1:
+        return 0
+    recursion(n-1)
+    print(n)
+
+recursion(4)
+
+
+# def selectionSort(a,n):
+#     for i in range(0,n):
+#         j=k=i
+#         while(j<n):
+#             if(a[j]<a[k]):
+#                 k=j
+#             j+=1
+#         temp = a[i]
+#         a[i] = a[k]
+#         a[k] = temp    
+#     print(a)
+
+# a =[3,4,61,1]  
+# selectionSort(a,4) 
+          
+
+
+
+# def insertionsort(a,n):
+#     for i in range(1,n):
+#         j=i-1
+#         x=a[i]
+
+#         # swaping
+#         while(a[j]>x and j>-1):
+#             a[j+1] = a[j]
+#             j-=1
+#         a[j+1] = x
+
+# a =[3,4,61,1]         
+# insertionsort(a,4)
+# print(a)
+
+# def bubbleSort(array,size):
+    
+#     for i in range(0,size):
+#         flag = 0
+#         for j in range(0,size):
+#             if array[j]>array[j+1]:
+#                 temp = array[j+1]
+#                 array[j+1] = array[j]
+#                 array[j] = temp
+#                 flag+=1
+#         if not flag:
+#             break
+#     print(array)
+# bubbleSort([2,3,454,1],4)
+
+
+
+# class PairHash():
+#     def __init__(self,size)->None:
+#         self.size = size
+#         self.table = [[] for _ in range(0,self.size)]
+#         # table = [[[k,v]],[]]
+#     def _hash(self,key):
+#         return hash(key)%self.size
+    
+#     def insert(self,key,value):
+#         index = self._hash(key)
+#         for pair in self.table[index]:
+#             if pair[0] == key:
+#                 pair[1] = value
+#                 return True    
+#         self.table[index].append([key,value])
+
+#     def delete(self,key):
+#         index = self._hash(key)
+#         for i,pair in enumerate(self.table[index]):
+#             if pair[0] == key:
+#                 return self.table[index].pop(i)
+
+#     def search(self,key):
+#         index = self._hash(key)
+#         for pair in self.table[index]:
+#             if pair[0] == key:
+#                 return pair[1]
+#         return None    
+
+#     def display(self):
+#         print(self.table)
+
+
+# a = PairHash(3)
+# a.insert("name","viraj")
+# a.insert("age",45)
+# print(a.delete("name"))
+# a.display()
+
+
+
+
 # class SingleHash():
 #     def __init__(self,size)->None:
 #         self.sizeTable = size
