@@ -1,4 +1,9 @@
 def merge(arr, low, mid, high):
+    # consider two array as below
+    # a = low to mid
+    # b = mid+1 to high
+    # c = merging both
+
     temp = []
     left = low
     right = mid + 1
@@ -19,8 +24,8 @@ def merge(arr, low, mid, high):
 
     # Copy remaining elements from right subarray
     while right <= high:
-        temp.append(arr[right])  # Fixed: should append from the right subarray
-        right += 1  # Fixed: should increment right, not left
+        temp.append(arr[right]) 
+        right += 1 
 
     # Copy sorted elements back to original array
     for i in range(len(temp)):
