@@ -1,10 +1,23 @@
-def recursion(n):
-    if n==1:
-        return 0
-    recursion(n-1)
-    print(n)
+arr = [23,34,45,23,23,54,34,9,2,2,2,10]
+def frequencyCount(arr):
+    map = {}
+    for i in arr:
+        if i in map:
+            map[i]+=1
+        else:
+            map[i] =1
+    print(max(map,key=map.get))        
+    print(map)        
 
-recursion(4)
+frequencyCount(arr)        
+
+# def recursion(n):
+#     if n==1:
+#         return 0
+#     recursion(n-1)
+#     print(n)
+
+# recursion(4)
 
 
 # def selectionSort(a,n):

@@ -7,6 +7,7 @@ def partition(arr,low,high)->int:
     i = low
     j = high
     while (i<j):
+        # here i = high so never goes index out of range error.
         while (arr[i]<=arr[pivot] and i<=high-1):
             i+=1
         while (arr[j]>arr[pivot] and j>=low+1):
