@@ -6,7 +6,7 @@ def frequencyCount(arr):
             map[i]+=1
         else:
             map[i] =1
-    print(max(map,key=map.get))        
+    print(max(map,key=map.get))       # key takes fucntion apply before comparing. 
     print(map)        
 
 frequencyCount(arr)        
