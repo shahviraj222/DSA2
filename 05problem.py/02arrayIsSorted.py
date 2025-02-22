@@ -38,11 +38,16 @@ print(removeduplicate2([1,2,3,1,1,2,3]))
 
 def rotateLeft(arr):
     for i in range(0,len(arr)-1):
+        # first element saved
         if i == 0:
             temp = arr[i]
+
+        # rest element swifting.
         arr[i] = arr[i+1]
+
+        # last element updated
         if i ==  len(arr)-2:
             arr[i+1] = temp
-
     print(arr)
+    
 rotateLeft([23,232,323])
