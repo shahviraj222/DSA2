@@ -1,15 +1,24 @@
-arr = [23,34,45,23,23,54,34,9,2,2,2,10]
-def frequencyCount(arr):
-    map = {}
-    for i in arr:
-        if i in map:
-            map[i]+=1
-        else:
-            map[i] =1
-    print(max(map,key=map.get))       # key takes fucntion apply before comparing. 
-    print(map)        
+def remaningElement(arr):
+    n = max(arr)
+    for i in range(1,n+1):
+        if i != arr[i-1]:
+            print(i)
+            break
 
-frequencyCount(arr)        
+remaningElement([1,2,3,5])
+
+# arr = [23,34,45,23,23,54,34,9,2,2,2,10]
+# def frequencyCount(arr):
+#     map = {}
+#     for i in arr:
+#         if i in map:
+#             map[i]+=1
+#         else:
+#             map[i] =1
+#     print(max(map,key=map.get))       # key takes fucntion apply before comparing. 
+#     print(map)        
+
+# frequencyCount(arr)        
 
 # def recursion(n):
 #     if n==1:

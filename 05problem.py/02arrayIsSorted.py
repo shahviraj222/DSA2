@@ -9,9 +9,9 @@ def arrayIsSorted(arr):
 
 print(arrayIsSorted([34,4445,54454,5554]))
 
-# problem2 : remove duplicate and return number of unique element 
+# problem2 : remove duplicate from sorted array and return number of unique element 
 
-# method 1
+# method 1 remove duplicate from sorted
 def removeduplicate(arr):
     mySet = set()
     for i in  range(0,len(arr)):
@@ -19,7 +19,7 @@ def removeduplicate(arr):
 
     return len(mySet)     
 
-# method 2 error
+# method 2 remove duplicate from sorted
 def removeduplicate2(arr):
     i = 0
     for j in range(1,len(arr)):
@@ -30,5 +30,5 @@ def removeduplicate2(arr):
     return i+1
 
 
-print(removeduplicate([1,2,3,1,1,2,3]))
-print(removeduplicate2([1,2,3,1,1,2,3]))
+print(removeduplicate([1,2,3,3,4,56]))
+print(removeduplicate2([1,2,3,3,4,56]))
