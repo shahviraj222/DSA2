@@ -25,7 +25,9 @@ def findLongestSubarray2(arr,s):
 
 print(findLongestSubarray2([1,1,1,1,34,45,54,22],4))
 
+
 # Problem2 : Find the index of two nums to get target sum
+
 
 # methode 1:BruteForce
 def targetTwo(arr,target):
@@ -50,3 +52,5 @@ def targetTwo2(arr,target):
 print(targetTwo2([1,32,3,9],12))
 # Time Complexity is O(n)
 # Space Complexity is O(n)
+
+
