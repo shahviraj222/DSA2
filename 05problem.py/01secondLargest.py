@@ -20,6 +20,15 @@ def getSecondLargest2(arr):
         if secondLargest < arr[i] and arr[i]!=largest:
             secondLargest = arr[i]
     return secondLargest
-        
+
+def getSecondLargest3(arr):
+    largest = -1
+    secondlargest = -1
+    for i in range(0,len(arr)):
+        if arr[i] > largest:
+            secondlargest = largest
+            largest = arr[i]
+    return secondlargest    
 print(getSecondLargest([343,453,543,543,4,3,5,2,34,3,234]))
 print(getSecondLargest2([343,453,543,543,4,3,5,2,34,3,234]))
+print(getSecondLargest3([343,453,543,543,4,3,5,2,34,3,234]))
