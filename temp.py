@@ -1,11 +1,14 @@
-def remaningElement(arr):
-    n = max(arr)
-    for i in range(1,n+1):
-        if i != arr[i-1]:
-            print(i)
-            break
+   
 
-remaningElement([1,2,3,5])
+
+# def remaningElement(arr):
+#     n = max(arr)
+#     for i in range(1,n+1):
+#         if i != arr[i-1]:
+#             print(i)
+#             break
+
+# remaningElement([1,2,3,5])
 
 # arr = [23,34,45,23,23,54,34,9,2,2,2,10]
 # def frequencyCount(arr):
