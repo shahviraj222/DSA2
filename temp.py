@@ -1,4 +1,45 @@
-   
+def rearrArrange(arr):
+    positive=[]
+    negative=[]
+    for i in arr:
+        if i >= 0:
+            positive.append(i)
+        else:
+            negative.append(i)
+    j = 0
+    k = 0 
+    for i in range(0,len(arr)):
+        if i % 2 == 0:
+            arr[i] = positive[j]
+            j+=1
+        else:
+            arr[i] = negative[k]   
+            k+=1
+
+    print(arr)
+
+rearrArrange([1,-1,-2,3])
+
+
+# def pairWithMaxSum(arr):
+#         # Your code goes here
+#         max = float('-inf')
+#         for i in range(0,len(arr)):
+#             for j in range(i,len(arr)):
+#                 sum = 0
+#                 secondmin = float('inf')
+#                 min = float('inf')
+#                 for k in range(i,j+1):
+#                     if arr[k]<min:
+#                         min = arr[k]
+#                     if arr[k]<secondmin and arr[k]!=min:
+#                         secondmin = arr[k]
+#             sum = min + secondmin      
+#             if sum > max:
+#                 max = sum
+#         return max   
+
+# print(pairWithMaxSum([4 ,3, 1, 5, 6]))
 
 
 # def remaningElement(arr):
