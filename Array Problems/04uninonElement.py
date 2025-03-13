@@ -4,13 +4,13 @@ def unionElement(a, b):
 
     while i < len(a) and j < len(b):
         if a[i] > b[j]:
-            if c and c[-1] == b[j]:  # ✅ Check if c is not empty before comparing
+            if c and c[-1] == b[j]:  # ✅ Check if c is not empty and not duplicate
                 j += 1
             else:
                 c.append(b[j])
                 j += 1    
         else:
-            if c and c[-1] == a[i]:  # ✅ Check if c is not empty
+            if c and c[-1] == a[i]:  # ✅ Check if c is not empty and not duplicate
                 i += 1
             else:
                 c.append(a[i])

@@ -1,24 +1,72 @@
-def rearrArrange(arr):
-    positive=[]
-    negative=[]
+def rearrange(arr):
+    negative = []
+    positive = []
     for i in arr:
-        if i >= 0:
-            positive.append(i)
-        else:
+        if i<0:
             negative.append(i)
-    j = 0
-    k = 0 
-    for i in range(0,len(arr)):
-        if i % 2 == 0:
-            arr[i] = positive[j]
-            j+=1
         else:
-            arr[i] = negative[k]   
-            k+=1
+            positive.append(i)
+
+    if len(positive) > len(negative):
+        for i in range(0,len(negative)):
+            arr[2*i] = positive[i]
+            arr[2*i+1] = negative[i] 
+        index = len(negative)*2
+
+        for i in range(len(negative),len(positive)):
+            arr[index] = positive[i]
+            index+=1
+
+    else:
+        for i in range(0,len(positive)):
+            arr[2*i] = positive[i]
+            arr[2*i+1] = negative[i]
+
+        index = 2 * len(positive)
+        for i in range(len(positive),len(negative)):
+            arr[index] = negative[i]
+            index+=1
 
     print(arr)
 
-rearrArrange([1,-1,-2,3])
+rearrange([1,-9,-9,10,-10,10,-3,-4,-5])
+                         
+
+
+
+def rearrange2(arr):
+    ans = [0] * len(arr)
+    positive  = 0
+    negative = 1
+    for i in range(0,len(arr)):
+        if arr[i] < 0:
+            ans[negative] = arr[i]
+            negative +=2
+        else:
+            ans[positive]=arr[i]
+            positive +=2
+    print(ans)
+
+rearrange2([1,-9,-9,10])
+
+
+def consecutiveElement(arr):
+    max = 0
+    
+    for i in range(len(arr)):
+        temp = arr[i]+1
+        count = 1
+        while temp in arr:
+            temp = temp+1
+            count+=1
+
+        if count>max:
+            max = count
+
+    return max
+
+print(consecutiveElement([1,2,3,4,5,6,7,9]))
+
 
 
 # def pairWithMaxSum(arr):
