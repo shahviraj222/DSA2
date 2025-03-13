@@ -1,71 +1,99 @@
-def rearrange(arr):
-    negative = []
-    positive = []
-    for i in arr:
-        if i<0:
-            negative.append(i)
-        else:
-            positive.append(i)
+def makerow(i,arr):
+    for j in range(len(arr[0])): #number column
+        if arr[i][j] != 0:
+            arr[i][j] = -1
 
-    if len(positive) > len(negative):
-        for i in range(0,len(negative)):
-            arr[2*i] = positive[i]
-            arr[2*i+1] = negative[i] 
-        index = len(negative)*2
+def makecolum(j,arr):
+    for i in range(0,len(arr)): #number row
+        if arr[i][j] != 0:
+            arr[i][j] = -1
 
-        for i in range(len(negative),len(positive)):
-            arr[index] = positive[i]
-            index+=1
+def _2dmatrix(arr):
+    n = len(arr)  #number of rows
+    m = len(arr[0]) #nummber of column
+    for i in range(0,n):
+        for j in range(0,m):
+            if arr[i][j] == 0:
+                makerow(i,arr)
+                makecolum(j,arr)
 
-    else:
-        for i in range(0,len(positive)):
-            arr[2*i] = positive[i]
-            arr[2*i+1] = negative[i]
-
-        index = 2 * len(positive)
-        for i in range(len(positive),len(negative)):
-            arr[index] = negative[i]
-            index+=1
+    for i in range(0,n):
+        for j in range(0,m):
+            if arr[i][j] == -1:
+                arr[i][j] = 0
 
     print(arr)
 
-rearrange([1,-9,-9,10,-10,10,-3,-4,-5])
+_2dmatrix([[1,1,1],[1,0,1],[1,1,1]])
+
+# def rearrange(arr):
+#     negative = []
+#     positive = []
+#     for i in arr:
+#         if i<0:
+#             negative.append(i)
+#         else:
+#             positive.append(i)
+
+#     if len(positive) > len(negative):
+#         for i in range(0,len(negative)):
+#             arr[2*i] = positive[i]
+#             arr[2*i+1] = negative[i] 
+#         index = len(negative)*2
+
+#         for i in range(len(negative),len(positive)):
+#             arr[index] = positive[i]
+#             index+=1
+
+#     else:
+#         for i in range(0,len(positive)):
+#             arr[2*i] = positive[i]
+#             arr[2*i+1] = negative[i]
+
+#         index = 2 * len(positive)
+#         for i in range(len(positive),len(negative)):
+#             arr[index] = negative[i]
+#             index+=1
+
+#     print(arr)
+
+# rearrange([1,-9,-9,10,-10,10,-3,-4,-5])
                          
 
 
 
-def rearrange2(arr):
-    ans = [0] * len(arr)
-    positive  = 0
-    negative = 1
-    for i in range(0,len(arr)):
-        if arr[i] < 0:
-            ans[negative] = arr[i]
-            negative +=2
-        else:
-            ans[positive]=arr[i]
-            positive +=2
-    print(ans)
+# def rearrange2(arr):
+#     ans = [0] * len(arr)
+#     positive  = 0
+#     negative = 1
+#     for i in range(0,len(arr)):
+#         if arr[i] < 0:
+#             ans[negative] = arr[i]
+#             negative +=2
+#         else:
+#             ans[positive]=arr[i]
+#             positive +=2
+#     print(ans)
 
-rearrange2([1,-9,-9,10])
+# rearrange2([1,-9,-9,10])
 
 
-def consecutiveElement(arr):
-    max = 0
+# def consecutiveElement(arr):
+#     max = 0
     
-    for i in range(len(arr)):
-        temp = arr[i]+1
-        count = 1
-        while temp in arr:
-            temp = temp+1
-            count+=1
+#     for i in range(len(arr)):
+#         temp = arr[i]+1
+#         count = 1
+#         while temp in arr:
+#             temp = temp+1
+#             count+=1
 
-        if count>max:
-            max = count
+#         if count>max:
+#             max = count
 
-    return max
+#     return max
 
-print(consecutiveElement([1,2,3,4,5,6,7,9]))
+# print(consecutiveElement([1,2,3,4,5,6,7,9]))
 
 
 
