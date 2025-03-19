@@ -51,4 +51,4 @@ def majorityMoonesAlgo(arr):
 
     if count>len(arr)//2:
         return element                            
-print(majorityMoonesAlgo([23,23,42,34,34,34,34]))
+print(majorityMoonesAlgo([23,42,34,34,34,34,34,34]))
