@@ -16,7 +16,7 @@ def _3sum(arr):
 
 print(_3sum([-1,0,1,2,-1,-4]))
 
-# method2:
+# method2: looking for the third element
 def _3sum2(arr):
     n = len(arr)
     ans = set()
@@ -33,8 +33,7 @@ def _3sum2(arr):
 
 print(_3sum2([-1,0,1,2,-1,-4]))        
 
-# method3:
-
+# method3: sort and two pointer 
 def _3sum3(arr):
     arr = sorted(arr)
     n=len(arr)
