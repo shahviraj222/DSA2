@@ -1,4 +1,4 @@
-#problem: merge the two array without using extra space 
+#Problem: merge the two array without using extra space 
 
 # method1: here we are usign an extra space
 def merge1(arr1,arr2,m,n):
