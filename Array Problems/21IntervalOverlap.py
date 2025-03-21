@@ -25,4 +25,22 @@ def merge(interval):
 
 # Example usage:
 intervals = [[1,3],[2,6],[8,10],[15,18]]
-print(merge(intervals))  # Output: [[1,6],[8,10],[15,18]]
+print(merge(intervals)) 
+
+# Time complexity O(2N)
+
+def merge2(interval):
+    interval.sort()
+    ans = list()
+    for i in range(len(interval)):
+        if not ans or interval[i][0]>ans[-1][1]:
+            ans.append(interval[i])
+        else:
+            ans[-1][1] = max(ans[-1][1],interval[i][1]) 
+
+    return ans
+           
+intervals = [[1,3],[2,6],[8,10],[15,18]]
+print(merge2(intervals)) 
+
+

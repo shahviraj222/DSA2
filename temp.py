@@ -1,30 +1,51 @@
-def makerow(i,arr):
-    for j in range(len(arr[0])): #number column
-        if arr[i][j] != 0:
-            arr[i][j] = -1
+def intervalOverlap(interval):
+    ans = list()
 
-def makecolum(j,arr):
-    for i in range(0,len(arr)): #number row
-        if arr[i][j] != 0:
-            arr[i][j] = -1
+    for i in range(len(interval)):
+        start = interval[i][0]
+        end =  interval[i][1]
+        if ans and end<=ans[-1][1]:
+            continue
+        for j in range(i+1,len(interval)):
+            if interval[j][0] <= end:
+                end = max(end,interval[j][1])
+            else:
+                break
+        ans.append([start,end])        
+    return ans
 
-def _2dmatrix(arr):
-    n = len(arr)  #number of rows
-    m = len(arr[0]) #nummber of column
-    for i in range(0,n):
-        for j in range(0,m):
-            if arr[i][j] == 0:
-                makerow(i,arr)
-                makecolum(j,arr)
+intervals = [[1,3],[2,6],[8,10],[15,18]]
 
-    for i in range(0,n):
-        for j in range(0,m):
-            if arr[i][j] == -1:
-                arr[i][j] = 0
+print(intervalOverlap(intervals)) 
 
-    print(arr)
 
-_2dmatrix([[1,1,1],[1,0,1],[1,1,1]])
+# def makerow(i,arr):
+#     for j in range(len(arr[0])): #number column
+#         if arr[i][j] != 0:
+#             arr[i][j] = -1
+
+# def makecolum(j,arr):
+#     for i in range(0,len(arr)): #number row
+#         if arr[i][j] != 0:
+#             arr[i][j] = -1
+
+# def _2dmatrix(arr):
+#     n = len(arr)  #number of rows
+#     m = len(arr[0]) #nummber of column
+#     for i in range(0,n):
+#         for j in range(0,m):
+#             if arr[i][j] == 0:
+#                 makerow(i,arr)
+#                 makecolum(j,arr)
+
+#     for i in range(0,n):
+#         for j in range(0,m):
+#             if arr[i][j] == -1:
+#                 arr[i][j] = 0
+
+#     print(arr)
+
+# _2dmatrix([[1,1,1],[1,0,1],[1,1,1]])
 
 # def rearrange(arr):
 #     negative = []
