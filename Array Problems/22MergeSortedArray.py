@@ -33,7 +33,10 @@ def merge1(arr1,arr2,m,n):
 
 
 merge1([1,2,3],[2,5,6],3,3)
+# time complexity O(min(m,n))  
+# space complexity O(m+n)
 
+# method2 : here we are swaping the element from one to other arrays.
 def merge2(arr1,arr2,n,m):
     left = n-1
     right = 0
@@ -49,3 +52,9 @@ def merge2(arr1,arr2,n,m):
     print(arr1,arr2)
 
 merge2([1,2,3],[2,5,6],3,3)  
+
+# time complexity O(nlog(n))
+# space complexity O(1)
+
+def merge3(arr1,arr2,m,n):
+    pass
