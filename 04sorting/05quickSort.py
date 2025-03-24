@@ -4,22 +4,21 @@
 
 def partition(arr,low,high)->int:
     pivot = low
-    i = low
+    i = low+1
     j = high
-    while (i<j):
+    while True:
         # here i = high so never goes index out of range error.
-        while (arr[i]<=arr[pivot] and i<=high-1):
+        while (arr[i]<=arr[pivot] and i<=high):
             i+=1
-        while (arr[j]>arr[pivot] and j>=low+1):
+        while (arr[j]>arr[pivot] and j>=low):
             j-=1
         if i<j:
-            temp = arr[j]
-            arr[j] = arr[i]
-            arr[i] = temp
+            arr[i],arr[j]  = arr[j],arr[i]
 
-    temp = arr[pivot]
-    arr[pivot] = arr[j]
-    arr[j] = temp
+        else:
+            break    
+        
+    arr[pivot],arr[j] = arr[j],arr[pivot]        
     return j
 
 

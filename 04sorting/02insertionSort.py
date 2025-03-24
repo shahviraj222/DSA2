@@ -17,3 +17,5 @@ for i in range(1,len(a)):
 
 
 print(a)
+
+# algo is adaptive and also stable.

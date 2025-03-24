@@ -1,22 +1,94 @@
-def intervalOverlap(interval):
-    ans = list()
 
-    for i in range(len(interval)):
-        start = interval[i][0]
-        end =  interval[i][1]
-        if ans and end<=ans[-1][1]:
-            continue
-        for j in range(i+1,len(interval)):
-            if interval[j][0] <= end:
-                end = max(end,interval[j][1])
-            else:
-                break
-        ans.append([start,end])        
-    return ans
 
-intervals = [[1,3],[2,6],[8,10],[15,18]]
+# def missing(arr):
+#     n = max(arr)
+#     sum1= 0
+#     sum = (n*(n+1)) // 2
+#     for i in arr:
+#         sum1+=i
 
-print(intervalOverlap(intervals)) 
+#     return sum - sum1    
+
+
+# def findoneapperance(arr):
+#     hashmap = {}
+#     for i in arr:
+#         hashmap[i] = hashmap.get(i,0)+1
+
+#     for i in arr:
+#         if hashmap[i] == 1:
+#             return i
+
+
+# def secondlargest(arr):
+#     sorted = sorted(arr)
+#     largest = sorted[n-1]
+#     for i in range()
+# def palindrome(arr,start,end):
+#     if start >=end:
+#         return True
+#     if arr[start] == arr[end]:
+#         return palindrome(arr,start+1,end-1)
+#     else:
+#         return False
+
+# print(palindrome([1,2,3,4,3,2,1],0,6))    
+
+# def sum(i,n):
+#     if i>n:
+#         return 0
+#     return i+sum(i+1,n)
+
+# print(sum(1,5)) 
+
+# def fibona(n):
+#     if n <=1:
+#         return 1
+#     return fibona(n-1)*n
+
+# print(fibona(5))
+
+# def tail(i,n):
+#     if i>n:
+#         return
+#     tail(i+1,n)
+#     print(i)
+
+# tail(1,5)    
+
+# def head(i,n):
+#     if i>n:
+#         return
+#     print(i)
+#     head(i+1,n)
+# head(1,5)    
+
+# def revse(arr):
+#     if len(arr)<=1:
+#         return arr
+#     return revse(arr[1:])+[arr[0]]
+
+# print(revse([1,3,4,5]))
+
+# def intervalOverlap(interval):
+#     ans = list()
+
+#     for i in range(len(interval)):
+#         start = interval[i][0]
+#         end =  interval[i][1]
+#         if ans and end<=ans[-1][1]:
+#             continue
+#         for j in range(i+1,len(interval)):
+#             if interval[j][0] <= end:
+#                 end = max(end,interval[j][1])
+#             else:
+#                 break
+#         ans.append([start,end])        
+#     return ans
+
+# intervals = [[1,3],[2,6],[8,10],[15,18]]
+
+# print(intervalOverlap(intervals)) 
 
 
 # def makerow(i,arr):
