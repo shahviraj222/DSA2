@@ -1,3 +1,4 @@
+# if you find the which side to eliminate in the array your task is done.
 def binarySearch(arr,target):
     low = 0
     high = len(arr)-1
