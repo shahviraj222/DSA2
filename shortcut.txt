@@ -11,3 +11,9 @@ Shift + Command + P = "search bar of vs code (toggle word etc)"
 Shift + Command + F = Search File name
 
 Command + F = Find in open file
+
+Xcode shortcut:
+
+shifit + control + I = format the code
+Option + Cmd + Shift + Right Arrow = Fold the functions
+

@@ -1,4 +1,4 @@
-# problem: search the element in the rotated sorted  (unique element)
+# problem1: search the element in the rotated sorted  (unique element)
 def searchElement(arr,target):
     n = len(arr)
     low = 0
@@ -30,7 +30,7 @@ def searchElement(arr,target):
 
 print(searchElement([4,5,6,7,0,1,2],0))            
 
-# problem : search target element in the rotated array (duplicates allowed)
+# problem2 : search target element in the rotated array (duplicates allowed)
 
 def searchElementDuplicate(arr,target):
     n = len(arr)
@@ -61,3 +61,26 @@ def searchElementDuplicate(arr,target):
         return False
 
 print(searchElementDuplicate([2,5,6,0,0,1,2],0))
+
+# problem3: find the minimum element in roated array
+
+def minimumElement(nums):
+    n = len(nums)
+    low = 0
+    high = n - 1
+    ans = float('inf')
+    
+    while low <= high:
+        mid = (low + high) // 2
+        # Left half is sorted
+        if nums[low] <= nums[mid]:         # why we write <= because if low and mid are equals
+            ans = min(ans, nums[low])
+            low = mid + 1
+        # Right half is sorted
+        else:
+            ans = min(ans, nums[mid])        
+            high = mid - 1
+            
+    return ans
+
+print(minimumElement([3,4,5,1,2]))
