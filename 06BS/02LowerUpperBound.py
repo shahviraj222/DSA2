@@ -18,7 +18,7 @@ print("Index:",lowerBound([1, 2, 8, 10, 10, 12, 19],9))
 
 
 # problem2 UpperBound: smallest index such that arr[index] > x
-def upperBound(arr,x):
+def upperBound(arr,x)->int:
     n = len(arr)
     low = 0 
     high = n - 1
