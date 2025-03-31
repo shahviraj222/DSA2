@@ -1,3 +1,14 @@
+import math
+def findTime(arr,j):
+    timeTaken = 0
+    for i in range(len(arr)-1):
+        timeTaken+=math.ceil(arr[i]/j)
+    return timeTaken    
+def koko(arr,hour):
+    for i in range(1,max(arr)):
+        reuiredTime = findTime(arr,i)
+        if reuiredTime<hour:
+            return reuiredTime
 
 
 # def missing(arr):
