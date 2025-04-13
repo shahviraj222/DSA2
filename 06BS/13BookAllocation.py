@@ -22,7 +22,7 @@ def allocationBook(arr,student):
             return pages
         
 print(allocationBook([12, 34, 67, 90],2))        
-
+# time complexity : O(high-low*N)
 
 def allocationBook2(arr,student):
     low = max(arr)
@@ -37,3 +37,4 @@ def allocationBook2(arr,student):
     return low        
 
 print(allocationBook2([12, 34, 67, 90],2))  
+# (log(high-low)*N)
