@@ -24,7 +24,9 @@ def findMaxOne(arr):
             index = i    
     return index
 
-print("index of the row:",findMaxOne([[0,0,0,1,1,1,1],
+print("index of the row:",findMaxOne([
+            [0,0,0,1,1,1,1],
             [0,0,0,0,0,1,1],
             [0,0,1,1,1,1,1],
-            [1,1,1,1,1,1,1]]))
+            [1,1,1,1,1,1,1]
+            ]))

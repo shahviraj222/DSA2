@@ -15,5 +15,5 @@ def removeParenthesis(string):
 
     return "".join(result)
 
-print(removeParenthesis("(()())(())"))             
+print(removeParenthesis("(()()()(()))"))             
 
