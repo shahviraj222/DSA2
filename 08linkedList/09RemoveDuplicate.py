@@ -1,7 +1,6 @@
 # Problem : Remove the duplicate values from the sorted doubly linkedlist.
 
-def removeduplicate():
-    head = 1
+def removeduplicate(head):
     temp = head
     while temp and temp.next:
         nextNode = temp.next
