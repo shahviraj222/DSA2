@@ -1,7 +1,12 @@
 # Problem : find the pair that gives sum equal to given in sorted doubly linked list 
 
-# methode 1: using nested loops
+# sample variables
+head = 1
+tail_of_linked_list = 2
+pair = 2
+Key =0
 
+# methode 1: using nested loops
 temp1 = head
 ds = []
 while temp1:
@@ -16,7 +21,7 @@ while temp1:
 # methode 2: using two pointer left and right
 
 left = head
-right = tail of linked list
+right = tail_of_linked_list
 
 while left.value < right.value:
     if left.value + right.value == sum:
@@ -27,5 +32,5 @@ while left.value < right.value:
         right = right.prev 
     else:
         left = left.next
-        
+
  
