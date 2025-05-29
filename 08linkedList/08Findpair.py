@@ -8,6 +8,8 @@ Key =0
 
 
 
+
+
 # methode 1: using nested loops
 temp1 = head
 ds = []
