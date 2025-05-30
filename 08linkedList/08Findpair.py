@@ -6,10 +6,6 @@ tail_of_linked_list = 2
 pair = 2
 Key =0
 
-
-
-
-
 # methode 1: using nested loops
 temp1 = head
 ds = []
