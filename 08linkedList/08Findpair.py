@@ -18,6 +18,9 @@ while temp1:
     temp1 = temp1.next
 
 
+
+
+
 # methode 2: using two pointer left and right
 
 left = head
