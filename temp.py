@@ -1,14 +1,151 @@
-import math
-def findTime(arr,j):
-    timeTaken = 0
-    for i in range(len(arr)-1):
-        timeTaken+=math.ceil(arr[i]/j)
-    return timeTaken    
-def koko(arr,hour):
-    for i in range(1,max(arr)):
-        reuiredTime = findTime(arr,i)
-        if reuiredTime<hour:
-            return reuiredTime
+
+
+
+# fibonachi series
+# # 0,1,1,2,3,5,8,13
+# # 0,1,2,3,4,5,6,7
+
+# def fibonachi(num):
+#     if num<2:
+#         return num
+    
+#     else:
+#         return fibonachi(num-1)+fibonachi(num-2)
+
+# print(fibonachi(7))
+
+
+# def reverse(arr):
+#     if len(arr)>1:
+#         num = reverse(arr[1:])
+#         num.append(arr[0])
+#     else:
+#         return arr
+    
+#     return num
+
+# print(reverse([1,2,3]))
+
+# def printing(num):
+#     if num >0:
+#         print(num)
+#         printing(num-1)
+
+
+# printing(5)
+
+
+# def rev(num):
+#     n = False
+#     rev = 0
+#     if num <0:
+#         n = True
+#         num = abs(num)
+#     while num:
+#         rev = rev*10 + num % 10
+#         num = num // 10
+#     if n:
+#         rev = rev * -1    
+
+#     return rev
+
+# print(rev(-123))    
+
+
+# # 36
+# # 1*36
+# # 2*18
+# # 3*12
+# # 4*9
+# # 6*6
+
+# import math
+# def divisor(a):
+#     d=set()
+#     temp =int(math.sqrt(a))
+#     for i in range(temp,0,-1):
+#         if a%i == 0:
+#             d.add(i)
+#             d.add(a//i)
+#     return d 
+# print(divisor(36))       
+
+# def prime(a):
+#     temp = int(math.sqrt(a))
+#     for i in range(2,temp+1):
+#         if a%i == 0:
+#             return False
+#     return True
+# print(prime(33))    
+
+
+
+# # def armstrong(a):
+#     temp =a
+#     ans = 0
+#     while a:
+#         ans = ans+pow(a%10,3)
+#         a = a//10
+#     if temp == ans:
+#         print(True)
+#         return
+#     print(False)     
+
+# armstrong(153)
+
+# #  gcd
+# # 24,34
+# def gcd(m,n):
+#     temp = min(m,n)
+#     g = []
+#     for i in range(temp,0,-1):
+#         if m%i == 0 and n%i == 0:
+#             g.append(i)
+#     return g
+
+# print(gcd(12,34))        
+
+
+
+# reverse and palindrome
+# a = -121
+# def reverse(a):
+#     negflag = 0
+#     if a<0:
+#         a = abs(a)
+#         negflag = 1
+#     reverse = 0
+#     while a:
+#         reverse =( (reverse*10 )+ (a%10))
+#         a = a//10
+#     if negflag:
+#         reverse = reverse*-1    
+#     return reverse
+
+# def palindrome(a):
+#     if a<0:
+#         a = abs(a)
+#     rev = reverse(a)
+#     if rev == a:
+#         return True
+#     return False
+
+# print(reverse(-34))
+# print(palindrome(a))  
+
+
+
+# import math
+# def findTime(arr,j):
+#     timeTaken = 0
+#     for i in range(len(arr)-1):
+#         timeTaken+=math.ceil(arr[i]/j)
+#     return timeTaken    
+# def koko(arr,hour):
+#     for i in range(1,max(arr)):
+#         reuiredTime = findTime(arr,i)
+#         if reuiredTime<hour:
+#             return reuiredTime
 
 
 # def missing(arr):

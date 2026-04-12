@@ -1,6 +1,7 @@
 # fibonachi series      1 1 2 3 5 8
 # counting is done from 1 onwards [ not include 0 ]
 
+# O(2^n)
 def recfibona(n):
     if n <= 1:
         return n
