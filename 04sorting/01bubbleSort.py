@@ -26,6 +26,32 @@ for i in range(0, len(a)):
         break 
 
 print(a,flag)
-
-
 # Complexity of the Bubble Sort is O(n^2)
+
+
+
+# bubble sort recursive
+
+def bubblerec(arr,n,j=0):
+    # outer loop finished
+    if n == 1:
+        return 
+ 
+    # inner lopp finshed
+    if j == n-1:
+        return bubblerec(arr,n-1,0)
+    
+    # swapping
+    if arr[j+1]<arr[j]:
+        temp = arr[j]
+        arr[j] = arr[j+1]
+        arr[j+1] = temp
+
+    # countine inner loop
+    bubblerec(arr,n,j+1)
+
+
+arr = [3,2,1,0]
+bubblerec(arr,4)
+print(arr)
+

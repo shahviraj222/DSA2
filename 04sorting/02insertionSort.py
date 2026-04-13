@@ -19,3 +19,25 @@ for i in range(1,len(a)):
 print(a)
 
 # algo is adaptive and also stable.
+
+# recursive insertion sort
+
+def insertionrecv(arr,n,i):
+    if n == len(arr):
+        return
+    
+    if i == 0:
+        return insertionrecv(arr,n+1,n+1)
+    
+    if arr[i-1] > arr[i]:
+        arr[i],arr[i-1] = arr[i-1],arr[i]
+        insertionrecv(arr,n,i-1)
+    else:
+        insertionrecv(arr,n+1,n+1)
+
+
+
+arr = [3,2,1,0]
+insertionrecv(arr,1,1)
+print(arr)
+
