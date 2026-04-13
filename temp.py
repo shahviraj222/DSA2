@@ -1,5 +1,36 @@
 
 
+# sorting
+
+
+# def selectionsort(arr):
+#     for i in range(0,len(arr)-1):
+#         min = i
+#         for j in range(i,len(arr)-1):
+#             if arr[j+1] < arr[min]:
+#                 min = j+1
+#         temp = arr[min] 
+#         arr[min] = arr[i]
+#         arr[i] = temp
+#     return arr    
+
+# print(selectionsort([1,34,5,9,0]))
+
+
+
+def insertionsort(arr):
+    for i in range(1,len(arr)):
+        j = i
+        while ((j>0) and (arr[j-1]>arr[j])):
+            temp = arr[j]
+            arr[j] = arr[j-1]
+            arr[j-1] = temp
+            j-=1
+    return arr
+
+
+print(insertionsort([1,34,5,9,0]))
+
 
 # fibonachi series
 # # 0,1,1,2,3,5,8,13

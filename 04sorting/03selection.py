@@ -14,8 +14,9 @@ for i in range(0,len(a)-1):
         if a[k] > a[j]:
             k = j
         j += 1 
-    temp = a[i]    
-    a[i] = a[k]
-    a[k] = temp
+    if k != i:    
+        temp = a[i]    
+        a[i] = a[k]
+        a[k] = temp
 
 print(a)    
