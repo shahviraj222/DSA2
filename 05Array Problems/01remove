@@ -1,0 +1,54 @@
+
+# method1:
+a = [1,1,2,2,3,3,5]
+b = [None]*len(a)
+
+print(b)
+b[4]
+k=0
+b[0] = a[0]
+for i in range(1,len(a)):
+    if a[i] == b[k]:
+        continue
+    b[k+1] = a[i]
+    k+=1
+    
+    
+print(b)    
+        
+
+# Method2:Optimum without ue of any array
+# remove duplicate from sorted array
+
+def removduplicate(arr):
+    j = 1
+    i = 0
+    while j<len(arr):
+        while j < len(arr) and arr[i]==arr[j]:
+            j+=1
+        
+        if j >=len(arr):
+            break
+
+        i+=1
+        arr[i]=arr[j]    
+        j+=1
+
+    for k in range(0,i+1):
+        print(arr[k])
+
+removduplicate([1,1,1,1,1,1,1,1,2,2,2,2,2])
+
+# best see logic
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        i = 0
+        if len(nums) == 1:
+            return i+1
+        for j in range(1,len(nums)):
+            if nums[i] != nums[j]:
+                i = i+1
+                nums[i] = nums[j]
+
+        return i+1
