@@ -2,6 +2,38 @@
 
 # sorting
 
+def partition(arr, l, h):
+    i = l + 1
+    j = h
+
+    while True:
+        while i <= j and arr[i] <= arr[l]:
+            i += 1
+        while i <= j and arr[j] > arr[l]:
+            j -= 1
+        
+        if i <= j:
+            arr[i], arr[j] = arr[j], arr[i]
+        else:
+            break
+
+    arr[l], arr[j] = arr[j], arr[l]
+    return j
+
+
+def quicksort(arr, l, h):
+    if l < h:
+        p = partition(arr, l, h)
+        quicksort(arr, l, p - 1)
+        quicksort(arr, p + 1, h)
+    return arr
+
+
+print(quicksort([2, 3, 1, 0], 0, 3))
+        
+
+
+
 
 # def selectionsort(arr):
 #     for i in range(0,len(arr)-1):
@@ -18,18 +50,18 @@
 
 
 
-def insertionsort(arr):
-    for i in range(1,len(arr)):
-        j = i
-        while ((j>0) and (arr[j-1]>arr[j])):
-            temp = arr[j]
-            arr[j] = arr[j-1]
-            arr[j-1] = temp
-            j-=1
-    return arr
+# def insertionsort(arr):
+#     for i in range(1,len(arr)):
+#         j = i
+#         while ((j>0) and (arr[j-1]>arr[j])):
+#             temp = arr[j]
+#             arr[j] = arr[j-1]
+#             arr[j-1] = temp
+#             j-=1
+#     return arr
 
 
-print(insertionsort([1,34,5,9,0]))
+# print(insertionsort([1,34,5,9,0]))
 
 
 # fibonachi series

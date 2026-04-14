@@ -2,37 +2,33 @@
 
 # idea is all the left side element smaller and all the right side element grater
 
-def partition(arr,low,high)->int:
-    pivot = low
-    i = low+1
-    j = high
-    while True:
-        # here i = high so never goes index out of range error.
-        while (arr[i]<=arr[pivot] and i<=high):
-            i+=1
-        while (arr[j]>arr[pivot] and j>=low):
-            j-=1
-        if i<j:
-            arr[i],arr[j]  = arr[j],arr[i]
+def partition(arr, l, h):
+    i = l + 1
+    j = h
 
-        else:
-            break    
+    while True:
+        while i <= j and arr[i] <= arr[l]:
+            i += 1
+        while i <= j and arr[j] > arr[l]:
+            j -= 1
         
-    arr[pivot],arr[j] = arr[j],arr[pivot]        
+        if i <= j:
+            arr[i], arr[j] = arr[j], arr[i]
+        else:
+            break
+
+    arr[l], arr[j] = arr[j], arr[l]
     return j
 
 
-def quicksort(arr,low,high):
-    if low < high:
-        pivot = partition(arr,low,high)
-        quicksort(arr,low,pivot-1)
-        quicksort(arr,pivot+1,high)
+def quicksort(arr, l, h):
+    if l < h:
+        p = partition(arr, l, h)
+        quicksort(arr, l, p - 1)
+        quicksort(arr, p + 1, h)
+    return arr
 
 
-
-a = [3,4,56,43]
-quicksort(a,0,3)
-print(a)
-
+print(quicksort([2, 3, 1, 0], 0, 3))
 
 # O(nlogn)
