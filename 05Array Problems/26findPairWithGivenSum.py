@@ -33,3 +33,4 @@ print(pairfind([1,2,3,4,6],10))
 
 
 # we can do one more thing if array is sorted think !! not find then see (video chapter 7 / 35 no)
+
