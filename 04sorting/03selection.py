@@ -1,8 +1,9 @@
 """
-Selection Sort  : Algo take minimum swapping is done O(n). Time Complexity is O(n^2).
+Selection Sort  :  minimum swapping O(n). swap only coorect value found.
 Idea: Find the element for the given index.
 Each pass you got the minimum element of array.
 It is not adaptive and also not stable.
+Time Complexity is O(n^2).
 """
 
 a = [8,6,3,2,5,4,1]

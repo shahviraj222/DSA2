@@ -1,6 +1,6 @@
 # n = 153 = 1^3 + 5^3 + 3^3  
 
-# from last digit removal
+# logic: last digit removal
 def armstromChecker(num):
     sum = 0
     temp = num
@@ -17,7 +17,7 @@ def armstromChecker(num):
     return False    
 
 
-# from first digit removal
+# logic : first digit removal (here logic works :0^3 = 0 )
 
 # 10^k 
 
