@@ -1,3 +1,6 @@
+# union means unique
+
+# method 1: merging
 def unionElement(a, b):
     c = []  # ✅ Initialize an empty list
     i, j = 0, 0  
@@ -31,6 +34,9 @@ def unionElement(a, b):
             j += 1
 
     print(c)
+
+#method2: using set  
+
 
 # Example Test Case
 unionElement([2, 34, 43, 45], [43, 53, 65, 95])

@@ -1,23 +1,45 @@
-# remove duplicate from sorted array
+# roate left
 
-def removduplicate(arr):
-    j = 1
-    i = 0
-    while j<len(arr):
-        while j < len(arr) and arr[i]==arr[j]:
-            j+=1
+def rotate(arr):
+    temp = arr[0]
+    for i in range(1,len(arr)):
+        arr[i-1] = arr[i]
+    arr[len(arr)-1] = temp  
+    return arr
+
+def kroate(arr,k):
+    for i in range(1,k+1):
+        rotate(arr)
+    return arr
+
+# suppose d 8 then we get same array
+# d % len(arr) = total number of rotation
+
+print(kroate([0,123,234,34],5))
+print(kroate([0,123,234,34],1))
+
+
+
+# # remove duplicate from sorted array
+
+# def removduplicate(arr):
+#     j = 1
+#     i = 0
+#     while j<len(arr):
+#         while j < len(arr) and arr[i]==arr[j]:
+#             j+=1
         
-        if j >=len(arr):
-            break
+#         if j >=len(arr):
+#             break
 
-        i+=1
-        arr[i]=arr[j]    
-        j+=1
+#         i+=1
+#         arr[i]=arr[j]    
+#         j+=1
 
-    for k in range(0,i+1):
-        print(arr[k])
+#     for k in range(0,i+1):
+#         print(arr[k])
 
-removduplicate([1,1,1,1,1,1,1,1,2,2,2,2,2])
+# removduplicate([1,1,1,1,1,1,1,1,2,2,2,2,2])
 
 
 # sorting

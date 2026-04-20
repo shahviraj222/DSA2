@@ -1,5 +1,6 @@
 # Problem 1 : find the longest subarray of sum = k
 
+# methode 1: brute force
 def findLongestSubarray(arr,s):
     lenth = 0
     sum = 0
@@ -12,6 +13,7 @@ def findLongestSubarray(arr,s):
 
     return lenth+1
 
+#  methode 2: brute force
 def findLongestSubarray2(arr,s):
     length = 0
     for i in range(0,len(arr)):
@@ -24,6 +26,16 @@ def findLongestSubarray2(arr,s):
     return length             
 
 print(findLongestSubarray2([1,1,1,1,34,45,54,22],4))
+
+# method3: using prefix sum
+def findLongestSubarrayPrefix(nums,s):
+    prefix_sum = []
+    max_len = 0
+    sum = 0
+    for i in range(0,len(nums)):
+        sum+=nums[i]
+        
+
 
 
 # Problem2 : Find the index of two nums to get target sum

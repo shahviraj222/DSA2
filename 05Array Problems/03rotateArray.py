@@ -34,6 +34,17 @@ def rotateLeftD(arr,d):
 
 rotateLeftD([1,2,3,4,5],2)
 
+# solution 2: Using reversal
+# step1: reverse upto kth part
+# step2: reverse upto k+1th part to nth
+# step3: reverse entire array
+k = 3
+arr = [1, 2, 3, 4,45,234,12]
+arr[0:k] = arr[k-1::-1]
+arr[k:] = arr[len(arr)-1:k:-1]
+
+arr.reverse()
+print(arr)
 
 # problem 3: Moves Zeroes at end
 def moveZeroEnd(arr):
