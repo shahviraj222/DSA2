@@ -17,3 +17,16 @@ def moorealgo(arr):
 print(moorealgo([1,2]))
 
 
+# stock market problem
+
+def stock(arr):
+    min = float("inf")
+    max = float("-inf")
+    for i in arr:
+        if min>i:
+            min = i
+        if max < i - min:
+            max = i - min
+    return max if max > 0 else 0
+            
+print(stock([1,23,3,234,1]))
