@@ -71,3 +71,19 @@ def majorityMonnes(arr):
 
 print(majorityMonnes([3,2,3]))    
 
+# problem : element apper more then n//2 times
+# hash method 
+
+def majorityElement(nums):
+    count = {}
+    n = len(nums)
+    
+    for num in nums:
+        count[num] = count.get(num, 0) + 1
+        
+        if count[num] > n // 2:
+            return num
+        
+# count.get(num, 0)
+# here in dictionary if we [num]key value then that is used else it will return 0    
+    
