@@ -1,22 +1,40 @@
-# roate left
+# sign
 
-def rotate(arr):
-    temp = arr[0]
-    for i in range(1,len(arr)):
-        arr[i-1] = arr[i]
-    arr[len(arr)-1] = temp  
+def sign(arr):
+    pos = []
+    neg = []
+    # seperation
+    pos = [x for x in arr if x>0]
+    neg = [x for x in arr if x>0]
+    # merging
+    for i in range(len(arr)):
+        if i%2 == 0:
+            arr[i] = pos[i//2]
+        else:
+            arr[i] = neg[i//2]
+
     return arr
 
-def kroate(arr,k):
-    for i in range(1,k+1):
-        rotate(arr)
-    return arr
+print(sign([1,-2,2,1,-5,-9]))
+# # roate left
+
+# def rotate(arr):
+#     temp = arr[0]
+#     for i in range(1,len(arr)):
+#         arr[i-1] = arr[i]
+#     arr[len(arr)-1] = temp  
+#     return arr
+
+# def kroate(arr,k):
+#     for i in range(1,k+1):
+#         rotate(arr)
+#     return arr
 
 # suppose d 8 then we get same array
 # d % len(arr) = total number of rotation
 
-print(kroate([0,123,234,34],5))
-print(kroate([0,123,234,34],1))
+# print(kroate([0,123,234,34],5))
+# print(kroate([0,123,234,34],1))
 
 
 
