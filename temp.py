@@ -1,22 +1,32 @@
-# sign
+# Tower of hanio:
 
-def sign(arr):
-    pos = []
-    neg = []
-    # seperation
-    pos = [x for x in arr if x>0]
-    neg = [x for x in arr if x>0]
-    # merging
-    for i in range(len(arr)):
-        if i%2 == 0:
-            arr[i] = pos[i//2]
-        else:
-            arr[i] = neg[i//2]
+def toh(n,s,h,d):
+    if n>0:
+        toh(n-1,s,d,h)
+        print(f"Disk {n} move from {s} to {d} ")
+        toh(n-1,h,s,d)
 
-    return arr
+toh(4,"A","B","C")
 
-print(sign([1,-2,2,1,-5,-9]))
-# # roate left
+# # sign
+
+# def sign(arr):
+#     pos = []
+#     neg = []
+#     # seperation
+#     pos = [x for x in arr if x>0]
+#     neg = [x for x in arr if x>0]
+#     # merging
+#     for i in range(len(arr)):
+#         if i%2 == 0:
+#             arr[i] = pos[i//2]
+#         else:
+#             arr[i] = neg[i//2]
+
+#     return arr
+
+# print(sign([1,-2,2,1,-5,-9]))
+# # # roate left
 
 # def rotate(arr):
 #     temp = arr[0]
