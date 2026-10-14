@@ -1,12 +1,41 @@
+# mergesort
+
+# merge
+
+def merge(arr,l,m,h):
+    a = l
+    b = m + 1
+    temp = []
+
+    while (a<=m and b<=h):
+        if arr[a] <= arr[b]:
+            temp.append(arr[a])
+            a+=1
+        else:
+            temp.append(arr[b])
+            b+=1
+
+    while (a<=m):
+        temp.append(arr[a])
+        a+=1
+
+    while (b<=h):
+        temp.append(arr[b])
+        b+=1
+
+    for i in temp:
+        arr[l] = i 
+        l+1
+
 # Tower of hanio:
 
-def toh(n,s,h,d):
-    if n>0:
-        toh(n-1,s,d,h)
-        print(f"Disk {n} move from {s} to {d} ")
-        toh(n-1,h,s,d)
+# def toh(n,s,h,d):
+#     if n>0:
+#         toh(n-1,s,d,h)
+#         print(f"Disk {n} move from {s} to {d} ")
+#         toh(n-1,h,s,d)
 
-toh(4,"A","B","C")
+# toh(4,"A","B","C")
 
 # # sign
 
